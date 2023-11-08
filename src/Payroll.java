@@ -103,11 +103,11 @@ public class Payroll {
 		frame.getContentPane().add(lblNewLabel_8);
 		
 		JLabel lblNewLabel_9 = new JLabel("TAX 15% of Monthly Wage");
-		lblNewLabel_9.setBounds(241, 60, 136, 14);
+		lblNewLabel_9.setBounds(225, 60, 148, 14);
 		frame.getContentPane().add(lblNewLabel_9);
 		
 		JLabel lblNewLabel_10 = new JLabel("Philhealth 5%");
-		lblNewLabel_10.setBounds(306, 85, 66, 14);
+		lblNewLabel_10.setBounds(285, 85, 92, 14);
 		frame.getContentPane().add(lblNewLabel_10);
 		
 		JLabel lblNewLabel_11 = new JLabel("SSS 2%");
