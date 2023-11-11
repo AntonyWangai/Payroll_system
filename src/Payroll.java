@@ -123,7 +123,7 @@ public class Payroll {
 		frame.getContentPane().add(lblNewLabel_13);
 		
 		Name = new JTextField();
-		Name.setBounds(136, 32, 86, 20);
+		Name.setBounds(136, 32, 122, 20);
 		frame.getContentPane().add(Name);
 		Name.setColumns(10);
 		
@@ -198,27 +198,33 @@ public class Payroll {
 
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			int hour,days;
-			float rate,salary;
+			int rate,hour,days;
+			
 			Name.getText();
-			rate=Float.valueOf(Rate.getText());
+			rate=Integer.valueOf(Rate.getText());
 			hour=Integer.valueOf(Hour.getText());
 			days=Integer.valueOf(Days.getText());
-			salary = rate*hour*days;
+			int salary = rate*hour*days;
+			
 			Salary.setText(String.valueOf(salary));
 			double tax=salary*0.15;
-			Tax.setText(String.valueOf(tax));
+			int taxes=(int)tax;
+			Tax.setText(String.valueOf(taxes));
 			double phil=0.05*salary;
-			Phil.setText(String.valueOf(phil));
+			int phils=(int)phil;
+			Phil.setText(String.valueOf(phils));
 			double sss=0.02*salary;
-			SSS.setText(String.valueOf(sss));
-			double deduct=tax+phil+sss;
-			Totaldeduct.setText(String.valueOf(deduct));
+			int ssss=(int)sss;
+			SSS.setText(String.valueOf(ssss));
+			double deduct=taxes+phils+ssss;
+			int deducts=(int)deduct;
+			Totaldeduct.setText(String.valueOf(deducts));
 			
 			Gross.setText(String.valueOf(salary));
-			Deduct.setText(String.valueOf(deduct));
+			Deduct.setText(String.valueOf(deducts));
 			
-			double net=salary-deduct;
+			double net=salary-deducts;
+			int nets=(int)net;
 			Net.setText(String.valueOf(net));
 			
 			}
